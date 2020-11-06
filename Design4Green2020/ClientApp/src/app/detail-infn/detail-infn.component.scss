@@ -1,0 +1,30 @@
+h3 {
+    color: #146894;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+.indicateurs > div {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+.lblInd {
+    display: inline-block;
+    margin-left: 5px;
+    width: calc(100% - 25px);
+    vertical-align: top;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+.d4g-acces-info, .d4g-interfaces, .d4g-usage, .d4g-administrative {
+    background-color: #146894;
+    color: white;
+    padding: 2px;
+}
+.d4g-administrative > span[class^="path"]:before {
+    color: white;
+}
+p:first-of-type {
+    margin-top: 20px;
+}

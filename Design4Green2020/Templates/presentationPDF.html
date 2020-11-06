@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Indice de Fragilite Numerique | INR | Institut du Numérique Responsable</title>
+    <style>
+        html {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.9em;
+        }
+        header img {
+            vertical-align: middle;
+            margin-right: 30px;
+        }
+
+        header {
+            text-align: center;
+        }
+
+        #logoOcc {
+            width: 70px;
+        }
+
+        #logoAnsa {
+            width: 100px;
+        }
+
+        #logoMednum {
+            width: 90px;
+        }
+
+        #logoINR {
+            width: 300px;
+        }
+
+        .inr {
+            margin-top: 50px;
+        }
+
+            .inr h2 {
+                text-transform: uppercase;
+                color: #146894;
+                font-weight: 700;
+                font-size: 1.5em;
+                margin: 0;
+            }
+
+            .inr p {
+                margin: 0;
+            }
+
+        .nameCom {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+            .nameCom h3 {
+                font-size: 1.5em;
+                text-transform: uppercase;
+                color: #1c8aad;
+                display: inline-block;
+                margin: 0;
+            }
+
+        .indice {
+            padding: 10px;
+        }
+
+            .indice > div:not(.indice > div:last-of-type) {
+                margin-bottom: 30px;
+            }
+
+            .indice > div > div {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .indice > div h4 {
+                color: #146894;
+                margin: 0px 0px 10px 0px;
+                font-size: 1em;
+                margin: 0;
+                text-transform: uppercase;
+            }
+
+        .score {
+            font-size: 0.8em;
+            text-align: center;
+            margin-right: 30px;
+            width: 200px;
+        }
+
+            .score > div {
+                color: #1c8aad;
+                font-size: 7em;
+                margin-bottom: -10px;
+            }
+
+                .score > div.valeurHaute {
+                    color: #146894;
+                }
+
+        .sousScore {
+            margin-top: 10px;
+            font-size: 1em;
+        }
+
+            .sousScore > div > span {
+                display: inline-block;
+                width: 30px;
+            }
+            .sousScore img {
+                width: 15px;
+                display: inline-block;
+            }
+        .conclu {
+            margin-top: 20px;
+        }
+        .conclu, .inr p {
+            white-space: pre-line;
+            word-break: initial;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logoINR" src="data:image/png;base64,{srcImgLogoInr}" alt="Logo INR" />
+        <img id="logoAnsa" src="data:image/png;base64,{srcImgLogoAnsa}" alt="Logo ANSA" />
+        <img id="logoMednum" src="data:image/png;base64,{srcImgLogoMednum}" alt="Logo Mednum" />
+        <img id="logoOcc" src="data:image/png;base64,{srcImgLogoPrefRegOcc}" alt="Logo Préfecture de Région Occitanie" />
+    </header>
+    <div class="inr">
+        <h2>Indice national de fragilité numérique</h2>
+        <p>
+            Cet outil cartographique, développé par l’Institut du Numérique Responsable (INR), permet la visualisation d'indices de fragilité numérique territoire par territoire. La fragilité numérique est identifiée sur des critères liés à l'accès au numérique et sur le niveau de compétences de chacun et chacun.
+            Les quatres indicateurs de fragilité sont :
+            - Accès à l'information
+            - Compétences administratives
+            - Accès aux interfaces numériques
+            - Capacité d'usage des interfaces numériques
+            Cet outil permet de comparer l’indice de fragilité numérique d’une commune par rapport à son département ou sa région. Plus l’indice est élevé, plus la fragilité est forte.
+        </p>
+    </div>
+    <div class="nameCom">
+        <h3>{commune}</h3>
+        <br />
+        <h3>{quartier}</h3>
+        <sub>{hab} hab.</sub>
+    </div>
+    <div class="indice">
+        <div class="region">
+            <h4>{nameRegion}</h4>
+            <div class="score {colorGlobReg}">
+                <div>{scoreGlobalRegion}</div>
+                score global
+            </div>
+            <div class="sousScore">
+                <div>
+                    <span>{scoreRegionAccesInformation}</span>
+                    <img src="data:image/png;base64,{srcImgAccesInfo}" alt="Accès à l'information" />
+                    Accès à l'information
+                </div>
+                <div>
+                    <span>{scoreRegionCompetencesAdm}</span>
+                    <img src="data:image/png;base64,{srcImgCompetencesAdm}" alt="Compétences administratives" />
+                    Compétences administratives
+                </div>
+                <div>
+                    <span>{scoreRegionAccesInterfNum}</span>
+                    <img src="data:image/png;base64,{srcImgAccesInterfNum}" alt="Accès aux interfaces numériques" />
+                    Accès aux interfaces numériques
+                </div>
+                <div>
+                    <span>{scoreRegionUsageInterfNum}</span>
+                    <img src="data:image/png;base64,{srcImgUsageInterfNum}" alt="Capacité d'usage des interfaces numériques" />
+                    Capacité d'usage des interfaces numériques
+                </div>
+            </div>
+        </div>
+        <div class="region">
+            <h4>{nameDepartement}</h4>
+            <div class="score {colorGlobDepartement}">
+                <div>{scoreGlobalDepartement}</div>
+                score global
+            </div>
+            <div class="sousScore">
+                <div>
+                    <span>{scoreDepartementAccesInformation}</span>
+                    <img src="data:image/png;base64,{srcImgAccesInfo}" alt="Accès à l'information" />
+                    Accès à l'information
+                </div>
+                <div>
+                    <span>{scoreDepartementCompetencesAdm}</span>
+                    <img src="data:image/png;base64,{srcImgCompetencesAdm}" alt="Compétences administratives" />
+                    Compétences administratives
+                </div>
+                <div>
+                    <span>{scoreDepartementAccesInterfNum}</span>
+                    <img src="data:image/png;base64,{srcImgAccesInterfNum}" alt="Accès aux interfaces numériques" />
+                    Accès aux interfaces numériques
+                </div>
+                <div>
+                    <span>{scoreDepartementUsageInterfNum}</span>
+                    <img src="data:image/png;base64,{srcImgUsageInterfNum}" alt="Capacité d'usage des interfaces numériques" />
+                    Capacité d'usage des interfaces numériques
+                </div>
+            </div>
+        </div>
+        <div class="region">
+            <h4>{nameInterCommune}</h4>
+            <div class="score {colorGlobInterCommune}">
+                <div>{scoreGlobalInterCommune}</div>
+                score global
+            </div>
+            <div class="sousScore">
+                <div>
+                    <span>{scoreInterCommuneAccesInformation}</span>
+                    <img src="data:image/png;base64,{srcImgAccesInfo}" alt="Accès à l'information" />
+                    Accès à l'information
+                </div>
+                <div>
+                    <span>{scoreInterCommuneCompetencesAdm}</span>
+                    <img src="data:image/png;base64,{srcImgCompetencesAdm}" alt="Compétences administratives" />
+                    Compétences administratives
+                </div>
+                <div>
+                    <span>{scoreInterCommuneAccesInterfNum}</span>
+                    <img src="data:image/png;base64,{srcImgAccesInterfNum}" alt="Accès aux interfaces numériques" />
+                    Accès aux interfaces numériques
+                </div>
+                <div>
+                    <span>{scoreInterCommuneUsageInterfNum}</span>
+                    <img src="data:image/png;base64,{srcImgUsageInterfNum}" alt="Capacité d'usage des interfaces numériques" />
+                    Capacité d'usage des interfaces numériques
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="conclu">
+        La fragilité numérique de {commune}-{quartier} est {conclusionRegion} par rapport à la région à laquelle elle appartient.
+        La fragilité numérique de {commune}-{quartier} est {conclusionDepartement} par rapport au département auquel elle appartient.
+        La fragilité numérique de {commune}-{quartier} est {conclusionIntercom} par rapport à l'intercommunalité à laquelle elle appartient.
+    </div>
+</body>
+</html>

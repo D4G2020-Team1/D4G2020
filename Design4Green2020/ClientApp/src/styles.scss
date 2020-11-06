@@ -1,0 +1,156 @@
+@import "~leaflet/dist/leaflet.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.center {
+    justify-content: center;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+.button {
+    color: #FFF;
+    border-radius: 5px;
+    background: linear-gradient(#1c8aad, #146894);
+    text-align: center;
+    padding: 0.5rem;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.button:hover,
+.link-button:hover {
+    opacity: 0.8;
+}
+
+// Fonts
+@font-face {
+    font-family: 'd4g';
+    src: url('assets/fonts/d4g.ttf?q9dno') format('truetype'), url('assets/fonts/d4g.woff?q9dno') format('woff'), url('assets/fonts/d4g.svg?q9dno#d4g') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="d4g-"], [class*=" d4g-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'd4g' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.d4g-acces-info:before {
+    content: "\e900";
+}
+
+.d4g-administrative .path1:before {
+    content: "\e901";
+    color: rgb(0, 0, 0);
+}
+
+.d4g-administrative .path2:before {
+    content: "\e902";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.d4g-administrative .path3:before {
+    content: "\e903";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.d4g-administrative .path4:before {
+    content: "\e904";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.d4g-administrative .path5:before {
+    content: "\e905";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.d4g-administrative .path6:before {
+    content: "\e906";
+    margin-left: -1em;
+    color: rgb(1, 1, 1);
+}
+
+.d4g-administrative .path7:before {
+    content: "\e907";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.d4g-administrative .path8:before {
+    content: "\e908";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.d4g-administrative .path9:before {
+    content: "\e909";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.d4g-administrative .path10:before {
+    content: "\e90a";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.d4g-email:before {
+    content: "\e90b";
+}
+
+.d4g-fermer:before {
+    content: "\e90c";
+}
+
+.d4g-interfaces:before {
+    content: "\e90d";
+}
+
+.d4g-interrogration:before {
+    content: "\e90e";
+}
+
+.d4g-linkedin:before {
+    content: "\e90f";
+}
+
+.d4g-logo-MEDNUM .path1:before {
+    content: "\e910";
+    color: rgb(29, 43, 125);
+}
+
+.d4g-logo-MEDNUM .path2:before {
+    content: "\e911";
+    margin-left: -1em;
+    color: rgb(0, 0, 0);
+}
+
+.d4g-twitter:before {
+    content: "\e912";
+}
+
+.d4g-usage:before {
+    content: "\e913";
+}

@@ -1,0 +1,36 @@
+<main id="container">
+    <div id="left-pane">
+        <div id="left-pane-container">
+            <div>
+                <app-header></app-header>
+                <app-search (onCommuneSelected)="selectCommune($event)" (onIntercommSelected)="selectIntercomm($event)"></app-search>
+            </div>
+            <div>
+                <div id="partners" class="pure-u-23-24">
+                    <img src="Logo-ANSA-Header.jpg" alt="Logo ANSA" title="Logo ANSA" width="150" height="74" />
+                    <img src="logo-MEDNUM.jpg" alt="Logo MEDNUM" title="Logo MEDNUM" width="150" height="110" />
+                    <img src="Prefecture-de-region-occitanie.jpg" alt="Logo Préfecture de région Occitanie" title="Logo Préfecture de région Occitanie" width="85" height="109" />
+                </div>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="button" (click)="lancerExport()">Export des statistiques</button>
+            <button type="button" class="button" (click)="afficherModale()">RGPD</button>
+            <button type="button" class="button" (click)="afficherModaleInfo()" title="Infos sur l'application">?</button>
+        </div>
+    </div>
+    <div id="right-pane">
+        <app-score [score]="score"></app-score>
+        <app-map [scores]="scores" [events]="eventsSubject.asObservable()" *ngIf="scores" (onClickItemMap)="refreshScore($event)"></app-map>
+        <div id="introduce" *ngIf="!scores">
+            Veuillez sélectionner une intercommunalité ou une commune pour afficher les données correspondantes
+        </div>
+    </div>
+</main>
+<router-outlet></router-outlet>
+<ng-container *ngIf="modaleCliquee">
+    <app-popup-rgpd #modaleRgpd></app-popup-rgpd>
+</ng-container>
+<ng-container *ngIf="modaleInfoCliquee">
+    <app-popup-info #modaleInfo></app-popup-info>
+</ng-container>

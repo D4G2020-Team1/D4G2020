@@ -1,0 +1,35 @@
+export class Score {
+    scoreId: number;
+    libelleDepartement: string;
+    libelleEpci: string;
+    libelleRegion: string;
+    population: number;
+    scoreGlobalDep: number;
+    scoreGlobalEpci: number;
+    scoreGlobalReg: number;
+    nomIris: string;
+    codeIris: string;
+    numeroDepartement: string;
+    numeroEpci: string;
+    numeroRegion: number;
+    geoShape: string;
+    grandQuart: string;
+    scoreAccesInfoDep: number;
+    scoreAccesInfoEpci: number;
+    scoreAccesInfoReg: number;
+    scoreAccesInterDep: number;
+    scoreAccesInterEpci: number;
+    scoreAccesInterReg: number;
+    scoreCompAdminDep: number;
+    scoreCompAdminEpci: number;
+    scoreCompAdminReg: number;
+    scoreCompNumDep: number;
+    scoreCompNumEpci: number;
+    scoreCompNumReg: number;
+    scoreGlobalAccesDep: number;
+    scoreGlobalAccesEpci: number;
+    scoreGlobalAccesReg: number;
+    scoreGlobalCompDep: number;
+    scoreGlobalCompEpci: number;
+    coreGlobalCompReg: number;
+}

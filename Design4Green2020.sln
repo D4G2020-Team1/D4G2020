@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30621.155
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Design4Green2020", "Design4Green2020\Design4Green2020.csproj", "{92D6A61C-AC96-45FE-A4D3-4D35546449E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BO", "BO\BO.csproj", "{BACFEB08-84C1-4553-8C12-A760F397A6E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{CD590F6F-10AF-4B7F-A1D4-0039A59E311F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92D6A61C-AC96-45FE-A4D3-4D35546449E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D6A61C-AC96-45FE-A4D3-4D35546449E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D6A61C-AC96-45FE-A4D3-4D35546449E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D6A61C-AC96-45FE-A4D3-4D35546449E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BACFEB08-84C1-4553-8C12-A760F397A6E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BACFEB08-84C1-4553-8C12-A760F397A6E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BACFEB08-84C1-4553-8C12-A760F397A6E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BACFEB08-84C1-4553-8C12-A760F397A6E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD590F6F-10AF-4B7F-A1D4-0039A59E311F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD590F6F-10AF-4B7F-A1D4-0039A59E311F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD590F6F-10AF-4B7F-A1D4-0039A59E311F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD590F6F-10AF-4B7F-A1D4-0039A59E311F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0A1F914-62D1-4769-8CEC-09C975288B06}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,31 @@
+<div id="header-container">
+    <a href="https://indice.institutnr.org/" target="_blank" rel="noopener">
+        <img src="logo-inr-bandeau.jpg" id="logo" alt="Logo INR" title="Logo INR" class="pure-img" width="230" height="72"/>
+    </a>
+    <div id="links">
+        <a href="mailto:fragilitenumerique@institutnr.org" aria-label="Lien pour envoyer un mail à l'INR">
+            <span class="link-button">
+                <i class="d4g-email"></i>
+            </span>
+        </a>
+        <a href="https://twitter.com/institutnr?lang=fr" target="_blank" rel="noopener" aria-label="Lien vers la page Twitter de l'INR">
+            <span class="link-button">
+                <i class="d4g-twitter"></i>
+            </span>
+        </a>
+        <a href="https://www.linkedin.com/company/institutnr/" target="_blank" rel="noopener" aria-label="Lien vers la page LinkedIn de l'INR">
+            <span class="link-button">
+                <i class="d4g-linkedin"></i>
+            </span>
+        </a>
+</div>
+
+    <div id="title">
+        <span id="title-text">Indice national de fragilité numérique</span>
+        <span id="title-tooltip" (click)="detailOpened=!detailOpened" aria-label="Qu'est ce que l'indice national de fragilité numérique ?" title="Qu'est ce que l'indice national de fragilité numérique ?">?</span>
+        <div id="detail-infn" *ngIf="detailOpened">
+            <button id="btnCloseInfn"><i class="d4g-fermer" (click)="detailOpened=false;"></i></button>
+            <app-detail-infn></app-detail-infn>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<form class="pure-form pure-form-stacked" id="search-filters">
+    <span id="filter-title">Filtres</span>
+    <label (click)="region.focus()" for="region">Région</label>
+    <ng-select #region id="region" [(ngModel)]="selectedRegion" class="pure-u-23-24" name="region" (change)="changeRegionSelected($event)" [clearable]="false" aria-label="Région" role="search">
+        <ng-option *ngFor="let region of regions" [value]="region.regionId">{{region.libelle}}</ng-option>
+    </ng-select>
+
+    <label (click)="departement.focus()" for="departement">Département</label>
+    <ng-select #departement id="departement" [(ngModel)]="selectedDepartement" class="pure-u-23-24" name="departement" (change)="changeDepartementSelected()" [clearable]="false" aria-label="Département" role="search">
+        <ng-option *ngFor="let departement of departements" [value]="departement.departementId">{{departement.libelle}}</ng-option>
+    </ng-select>
+
+    <label (click)="intercomm.focus()" for="intercomm">Intercommunalités</label>
+    <ng-select #intercomm id="intercomm" [(ngModel)]="selectedIntercomm" class="pure-u-23-24" name="intercomm" (search)="getEpcis($event)" (change)="changeIntercommSelected()" aria-label="Intercommunalité" role="search">
+        <ng-option *ngFor="let intercomm of intercomms" [value]="intercomm.epciId">{{intercomm.libelle}}</ng-option>
+    </ng-select>
+
+    <label (click)="commune.focus()" for="commune">Commune</label>
+    <ng-select #commune id="commune" [(ngModel)]="selectedCommune" class="pure-u-23-24" name="commune" (search)="getCommunes($event)" (change)="changeCommuneSelected()" aria-label="Commune" role="search">
+        <ng-option *ngFor="let commune of communes" [value]="commune.codeInsee">{{commune.nomCommune}} ({{commune.codePostal}})</ng-option>
+    </ng-select> 
+</form>

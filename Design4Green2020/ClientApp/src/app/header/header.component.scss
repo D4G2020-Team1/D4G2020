@@ -1,0 +1,76 @@
+#logo {    
+    margin-bottom:20px;
+}
+
+#links, #title {
+    margin-bottom: 1em;
+}
+
+#header-container {
+    margin-bottom: 1em;
+}
+
+.link-button {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    color: #FFF;
+    border-radius: 5px;
+    background: linear-gradient(#1c8aad, #146894);
+    text-align: center;
+}
+
+.link-button {
+    margin: 0 0.5em;
+}
+
+.link-button:first-child {
+    margin-left: 0;
+}
+
+.link-button > i {
+    line-height: 30px;
+}
+
+#title-text {
+    text-transform: uppercase;
+    color: #146894;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#title-tooltip {
+    margin-left: 1em;
+    background-color: #146894;
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    color: #FFF;
+    text-align: center;
+    line-height: 22px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#detail-infn {
+    position: absolute;
+    z-index: 2;
+    background-color: #fff;
+    width: 20%;
+    box-shadow: 0 0 36px -13px rgba(0,0,0,.75);
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+#detail-infn > #btnCloseInfn {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+    background: unset;
+}
+#detail-infn > #btnCloseInfn .d4g-fermer {
+    font-weight: bold;
+    color: #d1d1d1;
+}

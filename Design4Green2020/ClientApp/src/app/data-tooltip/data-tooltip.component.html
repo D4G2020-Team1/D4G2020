@@ -1,0 +1,14 @@
+<div id="{{data.codeIris}}">
+    <span style="color:red" [ngStyle]="{'color': setColor(data.scoreGlobalReg)}">Score global région : {{data.scoreGlobalReg | number:'1.0-0'}}</span><br />
+    <span style="color:red" [ngStyle]="{'color': setColor(data.scoreGlobalDep)}">Score global département : {{data.scoreGlobalDep | number:'1.0-0'}}</span><br />
+    <span style="color:red" [ngStyle]="{'color': setColor(data.scoreGlobalEpci)}">Score global intercom. : {{data.scoreGlobalEpci | number:'1.0-0'}}</span><br />
+    <p>
+        Commune : {{data.nomIris}}<br />
+        Departement : {{data.libelleDepartement}}<br />
+        EPCI : {{data.libelleEpci}}<br />
+        Région : {{data.libelleRegion}}<br />
+    </p>
+    <p>
+        Population : {{data.population | number:'1.0-0'}}
+    </p>
+</div>
